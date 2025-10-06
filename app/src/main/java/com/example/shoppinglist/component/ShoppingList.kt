@@ -1,4 +1,4 @@
-package com.example.shoppinglist.components
+package com.example.shoppinglist.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
@@ -55,7 +55,6 @@ fun ShoppingList(items: List<String>) {
 fun AnimatedShoppingListItem(item: String) {
     var isVisible by remember { mutableStateOf(false) }
 
-    // Trigger animasi saat item pertama kali muncul
     LaunchedEffect(item) {
         delay(100)
         isVisible = true

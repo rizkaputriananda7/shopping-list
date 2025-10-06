@@ -1,5 +1,5 @@
 package com.example.shoppinglist.component
-// ... (semua import Material3, Modifier, dll yang sudah ada)
+
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -11,8 +11,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
-
-// PASTIKAN IMPORT INI ADA UNTUK NAVIGATION DAN MATERIAL 3
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
@@ -23,8 +21,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-// ... (lanjutan kode BottomNavItem dan BottomNavBar)
-// [Kode BottomNavItem, items, dan BottomNavBar yang sudah saya berikan sebelumnya]
 sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: String) {
     object Home : BottomNavItem("home", Icons.Default.Home, "Home")
     object Profile : BottomNavItem("profile", Icons.Default.Person, "Profile")
@@ -67,7 +63,6 @@ fun BottomNavBar(navController: NavController) {
 @Preview
 @Composable
 fun Title() {
-// [Kode fungsi Title() yang sudah ada]
     Text(
         text = "Shopping List",
         style = MaterialTheme.typography.headlineLarge.copy(
